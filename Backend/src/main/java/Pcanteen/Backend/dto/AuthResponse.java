@@ -16,13 +16,18 @@ public class AuthResponse {
 }
 */
 package Pcanteen.Backend.dto;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class AuthResponse {
 	 private String employeeId;
 	    private String token;
 	    private String fullName;
 	    private String department;
+	    
 		public String getEmployeeId() {
 			return employeeId;
 		}

@@ -25,15 +25,21 @@ public class SignUpRequest {
 */
 package Pcanteen.Backend.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SignUpRequest {
     private String fullName;
     private String department;
     private String employeeId;
     private String password;
     private String confirmPassword;
+    private String mobileNumber;
+    
 	public String getFullName() {
 		return fullName;
 	}
@@ -64,6 +70,23 @@ public class SignUpRequest {
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
 	}
+	public SignUpRequest(String fullName, String department, String employeeId, String password, String confirmPassword,
+			String mobileNumber) {
+		super();
+		this.fullName = fullName;
+		this.department = department;
+		this.employeeId = employeeId;
+		this.password = password;
+		this.confirmPassword = confirmPassword;
+		this.mobileNumber = mobileNumber;
+	}
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+	/*
 	public SignUpRequest(String fullName, String department, String employeeId, String password,
 			String confirmPassword) {
 		super();
@@ -72,7 +95,7 @@ public class SignUpRequest {
 		this.employeeId = employeeId;
 		this.password = password;
 		this.confirmPassword = confirmPassword;
-	}
+	}*/
 	public SignUpRequest() {
 		super();
 		// TODO Auto-generated constructor stub

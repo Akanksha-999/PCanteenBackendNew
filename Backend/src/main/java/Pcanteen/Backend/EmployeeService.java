@@ -32,4 +32,9 @@ public class EmployeeService {
         return employeeRepository.findByEmployeeId(employeeId)
                 .orElseThrow(() -> new RuntimeException("Employee not found"));
     }
+ // EmployeeService.java
+    public Employee findByMobileNumber(String mobileNumber) {
+        return employeeRepository.findByMobileNumber(mobileNumber)
+                .orElseThrow(() -> new RuntimeException("No employee found with mobile number: " + mobileNumber));
+    }
 }
